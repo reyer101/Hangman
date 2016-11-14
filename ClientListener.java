@@ -37,12 +37,6 @@ public class ClientListener implements Runnable
 			BufferedReader serverInput = new BufferedReader(new InputStreamReader(connectionSock.getInputStream()));
 			while (true)
 			{
-				if(wordChosen==true && messageCount==0)
-				{
-					System.out.println("You have 7 tries to guess the word");
-					System.out.println("Enter your first letter");
-					messageCount +=1;
-				}
 				// Get data sent from the server
 				String serverText = serverInput.readLine();
 				//System.out.println(isFirst);
@@ -66,22 +60,12 @@ public class ClientListener implements Runnable
 					}	
 
 				}
-
-				//System.out.println(messageCount);
+				
 				if(!serverInput.equals(null))
 				{
 					if(!serverText.equals("null") && messageCount> 1)
-					{
-						/*if(isFirst)
-						{
-							System.out.println("Player 2: " + serverText);
-						}		
-						else
-						{
-							System.out.println("Player 1: " + serverText);
-						}*/
-							System.out.println(serverText);		
-											
+					{						
+							System.out.println(serverText);												
 					}
 				}
 				else
@@ -97,9 +81,7 @@ public class ClientListener implements Runnable
 			}
 		}
 		catch (Exception e)
-		{
-			//System.out.println("Listener Error: " + e.toString());
-			//System.out.println("Closing connection for socket " + connectionSock);
+		{			
 			try
 			{
 				connectionSock.close();

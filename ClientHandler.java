@@ -108,7 +108,7 @@ public class ClientHandler implements Runnable
 
 								clientOutput.writeBytes("\n" + "Chances: " + game.getChances() + "\n");
 								clientOutput.writeBytes("Enter your first letter guess" + "\n");
-								messageCount++; //Good up until this point
+								messageCount++; 
 							}							
 													
 						}
@@ -156,8 +156,8 @@ public class ClientHandler implements Runnable
 							{
 								System.out.println("Player 2 has guessed the word");
 								clientOutput.writeBytes("Player 2 has guessed your word" + "\n");
-								secondClientOutput.writeBytes("Congratulations! You guessed the word "
-																	 + "'" + game.getWord() + "'!" + "\n");
+								secondClientOutput.writeBytes("Congratulations! You guessed the word "          //Outputs different messages to clients depending on if the word was
+																	 + "'" + game.getWord() + "'!" + "\n");		//guessd or not
 							}
 							else
 							{
@@ -179,7 +179,7 @@ public class ClientHandler implements Runnable
 					  // Connection was lost
 					  System.out.println("Closing connection for socket " + connectionSock);
 					   // Remove from arraylist
-					   socketList.remove(connectionSock);
+					   socketList.remove(connectionSock);   
 					   connectionSock.close();
 					   break;
 					}

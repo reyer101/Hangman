@@ -35,8 +35,7 @@ public class HangServer
 			// This is an infinite loop, the user will have to shut it down
 			// using control-c
 			while (true)
-			{	
-				//System.out.println(socketList.size()
+			{					
 				Socket connectionSock = serverSock.accept();
 				//Add this socket to the list
 				socketList.add(connectionSock);
