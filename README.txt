@@ -2,6 +2,8 @@ Name: Hangman
 
 Description: A multi-threaded, two player hangman game written in Java. This project contains a server, client, client handler, client listener, and a game interface.
 
+Hangman.java: This java program was simply used to test the hangman logic locally before transfering it into the multithreaded program. 
+
 Client: Starts a client listener thread for every client to connect and continuously receives user input via command line.
 
 Server: Creates a new instance of a Game Interface and passes it to each Client Handler. Waits for clients to connect and starts a client handler thread for each. 
