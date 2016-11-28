@@ -1,4 +1,4 @@
-Name: Hangman
+#MultiplayerHangman
 
 Description: A multi-threaded, two player hangman game written in Java. This project contains a server, client, client handler, client listener, and a game interface.
 
